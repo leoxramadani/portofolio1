@@ -12,24 +12,19 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <style>
-
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--
-    <center>
-    <div class="topnav" id="myTopnav">
-        <a href="#">About</a>
-        <a href="#">Languages</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-      </div>
-    </center>
--->
+    <div class="loader_bg">
+    <div class="loader">
+        <img src="pic1.PNG"><br>
+<p class="line anim-typewritter">Hello there! Welcome to my page.</p>
+
+        <img src="pic2.PNG">
+
+    </div>
+    </div>
 
 <section id="aboutme">
     
@@ -58,13 +53,20 @@
            <i class="fas fa-school"> "Mother Teresa University- Skopje"</i><br>
            <i class="far fa-comment"> In other words, I am pretty passionate on coding, learning new things,
                working with teammates, exchanging ideas, <br>helping others and trying to solve different kind of problems.<br>
-               It is worth to mention that I am a very fast learner and <br>I think <b>time</b> is the most valuable thing everyone has,
+               It is worth to mention that I am very a fast learner and <br>I think <b>time</b> is the most valuable thing everyone has,
                and I think that's why <b>bugs</b> make us so anxious! <i class="fas fa-grin-beam"></i>
 
            </i>
         </div>
     </center>
 </section>
+
+        
+
+
+
+
+
     <div class="aboutme" style="margin-top:150px;">
         <h3>
         Known Languages
@@ -193,15 +195,14 @@
 
 
     <section id="projects">
-        <center>
         <div class="aboutme" style="margin-top:150px;margin-bottom:20px">
             <h3>
             Projects
-        </h3>
-    </div>
-        </center>
+            </h3>
+        </div>
+
         <center>
-    <div data-aos="fade-up">
+    <div data-aos="fade-up" style=" display:inline-block;margin-left:5%;margin-right:5%;">
         <div class="project1" >
             <h3>Company Marketing</h3>
             <img src="./inv.jpg">
@@ -211,9 +212,9 @@
             </p>
         </div>
         </div>
-    </center>
-        <center>
-            <div data-aos="fade-up">
+
+
+            <div data-aos="fade-up" style=" display:inline-block;margin-left:5%;margin-right:5%;">
         <div class="project2" style="margin-top:50px;">     
             <h3>Artist portofolio</h3>
                <img src="./vsl.PNG">
@@ -223,10 +224,9 @@
                </p>
            </div>
            </div>
-        </center>
-        <center>
-            <div data-aos="fade-up">
-           <div class="project3" style="margin-top:50px;">     
+
+            <div data-aos="fade-up" style=" display:inline-block;margin-left:5%;margin-right:5%;">
+           <div class="project3" >     
             <h3>School administration</h3>
                <img src="./unt1.PNG">
                <p>
@@ -238,6 +238,7 @@
                </p>
            </div>
            </div>
+
         </center>
     </section>
 
@@ -279,7 +280,7 @@
             <h3>
                 Brackets
             </h3>
-            <img src="./brackets.png" >
+            <img src="./brackets.png" style="width:70%;" >
             <a href="http://brackets.io/" >Download Link</a>
             <i class="far fa-check-circle"></i>
             </div>
@@ -290,7 +291,7 @@
                 <h3>
                     Visual Studio
                 </h3>
-                <img src="./vsc2.png" >
+                <img src="./vsc2.png" style="width:70%;" >
                 <a href="https://visualstudio.microsoft.com/downloads/">Download Link</a>
                 <i class="far fa-check-circle"></i>
             </div>
@@ -338,14 +339,14 @@
 </div>
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $('.skill-per').each(function(){
     var $this = $(this);
     var per = $this.attr('per');
     $this.css("width",per+'%');
     $({animatedValue: 0}).animate({animatedValue: per},{
-        duration: 1000,
+        duration: 5000,
         step: function(){
             $this.attr('per', Math.floor(this.animatedValue) + '%');
         },
@@ -354,13 +355,11 @@ $('.skill-per').each(function(){
         }
     })
 }); 
-</script>
-<script>
-            AOS.init({
-                duration:2000,
-            });
-  </script>
-<script>
+
+AOS.init({
+duration:2000,
+});
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -369,6 +368,13 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+
+
+setTimeout(function(){
+    $('.loader_bg').fadeToggle();
+},2500);
+
 </script>
 </body>
 </html>
