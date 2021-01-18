@@ -18,16 +18,16 @@
 <body>
     <div class="loader_bg">
     <div class="loader">
-        <img src="pic1.PNG"><br>
-<p class="line anim-typewritter">Hello there! Welcome to my page.</p>
 
+        <img src="pic1.PNG"><br>
+<p class="line anim-typewritter">Hello there! <br>Welcome to my page.</p>
         <img src="pic2.PNG">
 
     </div>
     </div>
 
 <section id="aboutme">
-    
+    <div style="margin-top:70px;"></div>
 <div class="topnav" id="myTopnav">
     <img src="./background.PNG" >
     <a href="#aboutme" >About</a>
@@ -66,6 +66,7 @@
 
 
 
+    <section id="languages">
 
     <div class="aboutme" style="margin-top:150px;">
         <h3>
@@ -73,7 +74,6 @@
     </h3>
     </div>
 
-    <section id="languages">
     <div class="code" >
             <i class="	fas fa-code"></i>
     </div>
@@ -86,7 +86,7 @@
     <div data-aos="fade-up">
     <div class="skills">
         <div class="skill">
-            <div class="skill-name" style="background:chocolate;width:40px;text-align:center">HTML</div>
+            <div class="skill-name" style="background:chocolate;width:45px;text-align:center">HTML</div>
             <div class="skill-bar">
                 <div class="skill-per" per="85" style="background:chocolate"></div>
             </div>
@@ -130,9 +130,9 @@
     <div data-aos="fade-up">
     <div class="skills">
         <div class="skill">
-            <div class="skill-name"  style="background:hotpink;width:120px;text-align:center">ASP.NET/MVC</div>
+            <div class="skill-name"  style="background:hotpink;width:125px;text-align:center">ASP.NET/MVC</div>
             <div class="skill-bar">
-                <div class="skill-per" per="50" style="background:hotpink"></div>
+                <div class="skill-per" per="35" style="background:hotpink"></div>
             </div>
         </div>
     </div>
@@ -265,12 +265,12 @@
             </div>
 
             <div data-aos="fade-up" style=" display:inline-block; margin-left:5%;margin-right:5%;">
-            <div class="tool1" style="border:3px solid orange;box-shadow:0px 0px 37px orange">
+            <div class="tool1" style="border:3px solid orange;box-shadow:0px 0px 37px rgb(255, 30, 0)">
                 <h3>
-                    XAMPP
+                    SQL Server
                 </h3>
-                <img src="./xamp.jpg">
-                <a href="https://www.apachefriends.org/download.html">Download Link</a>
+                <img src="./sql.png">
+                <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">Download Link</a>
                 <i class="far fa-check-circle"></i>
             </div>
             </div>
@@ -317,12 +317,9 @@
         <div data-aos="fade-up">
         <div class="email">
             <form action="mailto:leotrimramadani5@gmail.com" method="post" enctype="text/plain">
-                <label>*Name: </label><br>
-                <input type="text" name="name" required><br><br>
-                <label>*E-mail: </label><br>
-                <input type="text" name="mail" required><br><br>
-                <label>*Comment: </label><br>
-                <input type="text" name="comment" required><br><br>
+                <input type="text" name="name" required placeholder="Name: "><br><br>
+                <input type="text" name="mail" required placeholder="E-mail: "><br><br>
+                <input type="text" name="comment" required placeholder="Comment: "><br><br>
                 <input type="submit" value="Send">
                 <input type="reset" value="Reset">
                 </form>
@@ -369,12 +366,36 @@ function myFunction() {
   }
 }
 
-
-
 setTimeout(function(){
     $('.loader_bg').fadeToggle();
 },2500);
 
 </script>
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
 </body>
 </html>
