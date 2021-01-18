@@ -23,13 +23,14 @@ body{
   left:25%;
   right:25%;
   border:3px solid white;
+  margin-top:10px;
 }
 .topnav {
   background-color: #333;
   overflow: hidden;
   border-radius:10px;
   float:left;
-  width:auto
+  width:auto;
 }
 .topnav img{
   width:auto;
@@ -71,7 +72,6 @@ body{
   .topnav a.icon {
     float: right;
     display: block;
-    
   }
 }
 
@@ -150,7 +150,7 @@ margin-top:5px;}
 
 .skills{
   width:100%;
-  max-width:300px;
+  max-width:600px;
   padding:0 20px;
   align-self: center;
   align-content: center;
@@ -161,6 +161,11 @@ margin-top:5px;}
   .skills {
     margin-left:0;
     width:auto;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .skills {
+    max-width:300px;
   }
 }
 .skill-name{
@@ -432,12 +437,16 @@ box-shadow: 10px 10px 15px black;
 }
 .email label{
   text-align:center;
-  color:white;
+  color:rgb(112, 106, 106);
   font-size:17px;
 }
 .email input{
-  
-  box-shadow:5px 5px 10px crimson;
+  background:transparent;
+  border:0;
+  border-radius:20px;
+  text-align: center;
+  color:rgb(112, 106, 106);
+  box-shadow:0px 0px 10px white;
 }
 .email input[type="submit"]{
   width:70px;
@@ -522,12 +531,13 @@ align-content: center;
   animation: typewritter 2s steps(40)  1 normal both,
   blinkTextCursor 500ms steps(40) infinite normal;
 }
+
 @keyframes typewritter{
 from{
   width:0;
 }
 to{
-  width:17.3em;
+  width:10.5em;
 }
 }
 @keyframes blinkTextCursor{
