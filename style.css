@@ -402,7 +402,7 @@ box-shadow: 10px 10px 15px black;
   margin-top:50px;
   width:250px;
   height:314px;
-  background-color:black;
+  background-color:transparent;
   border-radius:20px;
   display:inline-block;
   border:2px solid crimson;
@@ -447,7 +447,6 @@ box-shadow: 10px 10px 15px black;
   border-radius:20px;
   text-align: center;
   color:rgb(112, 106, 106);
-  box-shadow:0px 0px 10px white;
 }
 .email input[type="submit"]{
   width:70px;
