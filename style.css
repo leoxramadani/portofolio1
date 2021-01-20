@@ -460,6 +460,7 @@ box-shadow: 10px 10px 15px black;
   width:70px;
   border-radius:10px;
   cursor:pointer;
+  border:3px solid skyblue;
 }
 .email input[type="reset"]{
   width:70px;
